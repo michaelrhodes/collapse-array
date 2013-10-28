@@ -1,0 +1,42 @@
+{
+  "name": "collapse-array",
+  "version": "0.0.0",
+  "description": "A simple utility for collapsing single-element arrays.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "~2.1.0"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": {
+      "ie": [7, 8, 9, 10],
+      "chrome": [25],
+      "firefox": [4, 19],
+      "safari": [5.1, 6],
+      "opera": [10, 12],
+      "iphone": [6],
+      "android": [4.2]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:michaelrhodes/collapse-array.git"
+  },
+  "keywords": [
+    "number",
+    "surrounding",
+    "range"
+  ],
+  "author": "Michael Rhodes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelrhodes/collapse-array/issues"
+  }
+}
