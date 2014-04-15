@@ -4,9 +4,10 @@ var collapse = function(array) {
       array[i] = collapse(array[i])
     }
   }
-  return array.length === 1 ?
-    array[0] :
-    array
+  return (l > 1 ? array :
+    l === 1 ? array[0] :
+    null
+  )
 }
 
 module.exports = function collapser(object) {

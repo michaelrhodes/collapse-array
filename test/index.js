@@ -5,10 +5,12 @@ run('Array', function(test) {
   var a = [1, 2, 3]
   var b = [4]
   var c = [[[[2],[3]]]]
+  var d = []
 
   test.equal(collapse(a), a)
   test.equal(collapse(b), b[0])
   test.deepEqual(collapse(c), [2, 3])
+  test.equal(collapse(d), null)
   test.end()
 })
 
@@ -20,7 +22,8 @@ run('Object', function(test) {
     d: function() {
       return 'hello'
     },
-    e: ['bar', ['baz']]
+    e: ['bar', ['baz']],
+    f: [[]]
   }
 
   var expected = {
@@ -30,7 +33,8 @@ run('Object', function(test) {
     d: function() {
       return 'hello'
     },
-    e: ['bar', 'baz']
+    e: ['bar', 'baz'],
+    f: null 
   }
 
   test.equal(
