@@ -1,4 +1,5 @@
 var run = require('tape').test
+var JSON = require('json3')
 var collapse = require('../')
 
 run('Array', function(test) {

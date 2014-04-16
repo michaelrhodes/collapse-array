@@ -1,6 +1,6 @@
 {
   "name": "collapse-array",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple utility for collapsing single-element arrays.",
   "main": "index.js",
   "directories": {
@@ -8,7 +8,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "tape": "~2.1.0"
+    "tape": "~2.1.0",
+    "json3": "~3.3.1"
   },
   "scripts": {
     "test": "tape test/*.js"
@@ -16,13 +17,39 @@
   "testling": {
     "files": "test/*.js",
     "browsers": {
-      "ie": [6, 7, 8, 9, 10],
-      "chrome": [20, 25, 29],
-      "firefox": [4, 19, 24],
-      "safari": [4, 5.1, 6],
-      "opera": [10, 12, 15],
-      "iphone": [6],
-      "android": [4.2]
+      "ie": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "chrome": [
+        20,
+        25,
+        29
+      ],
+      "firefox": [
+        4,
+        19,
+        24
+      ],
+      "safari": [
+        4,
+        5.1,
+        6
+      ],
+      "opera": [
+        10,
+        12,
+        15
+      ],
+      "iphone": [
+        6
+      ],
+      "android": [
+        4.2
+      ]
     }
   },
   "repository": {
