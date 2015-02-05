@@ -13,20 +13,22 @@ npm install collapse-array
 ### Example
 ``` js
 var collapse = require('collapse-array')
+var collapseDeep = require('collapse-array/deep')
+var collapseObj = require('collapse-array/object')
 
 collapse([4])
 // => 4
 
-collapse([[[[2],[3]]]])
-// => [2, 3]
-
 collapse([1, 2, 3])
 // => [1, 2, 3]
 
-collapse({
+collapseDeep([[[[2],[3]]]])
+// => [2, 3]
+
+collapseObj({
   a: 123,
   b: [['one'], ['two', 'three'], ['four']],
-  c: function() {
+  c: function () {
     return 'hello'
   }
 })
@@ -34,7 +36,7 @@ collapse({
 {
   a: 123,
   b: ['one', ['two', 'three'], 'four'],
-  c: function() {
+  c: function () {
     return 'hello'
   }
 }
