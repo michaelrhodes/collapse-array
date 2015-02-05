@@ -2,6 +2,7 @@ var run = require('tape')
 var JSON = require('json3')
 var collapse = require('../')
 var collapseDeep = require('../deep')
+var collapseObject = require('../object')
 
 run('Basic', function (test) {
   var a = [1, 2, 3]
@@ -14,7 +15,7 @@ run('Basic', function (test) {
   test.end()
 })
 
-run('Deep Array', function (test) {
+run('Deep', function (test) {
   var a = [1, 2, 3]
   var b = [4]
   var c = [[[[2],[3]]]]
@@ -27,7 +28,7 @@ run('Deep Array', function (test) {
   test.end()
 })
 
-run('Deep Object', function (test) {
+run('Object', function (test) {
   var source = {
     a: [1, 2, 3],
     b: [4],
@@ -51,7 +52,7 @@ run('Deep Object', function (test) {
   }
 
   test.equal(
-    JSON.stringify(collapseDeep(source)),
+    JSON.stringify(collapseObject(source)),
     JSON.stringify(expected)
   )
   test.end()
